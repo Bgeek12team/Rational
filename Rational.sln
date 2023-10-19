@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rational2", "Rational\Rational2.csproj", "{829513E8-3DBF-4C8B-8D7E-5AB08E9646ED}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "form", "form\form.csproj", "{3B9FE25E-6FAB-40C3-81F9-9BD8D8AC72A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RationalTests2", "RationalTests2\RationalTests2.csproj", "{409FAD75-165B-4F49-9A29-403DEF64780E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{829513E8-3DBF-4C8B-8D7E-5AB08E9646ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{829513E8-3DBF-4C8B-8D7E-5AB08E9646ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{829513E8-3DBF-4C8B-8D7E-5AB08E9646ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{829513E8-3DBF-4C8B-8D7E-5AB08E9646ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B9FE25E-6FAB-40C3-81F9-9BD8D8AC72A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B9FE25E-6FAB-40C3-81F9-9BD8D8AC72A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B9FE25E-6FAB-40C3-81F9-9BD8D8AC72A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B9FE25E-6FAB-40C3-81F9-9BD8D8AC72A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{409FAD75-165B-4F49-9A29-403DEF64780E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{409FAD75-165B-4F49-9A29-403DEF64780E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{409FAD75-165B-4F49-9A29-403DEF64780E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{409FAD75-165B-4F49-9A29-403DEF64780E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {248A8CAD-3F20-482B-AC77-EA9F8A5B4D3C}
+	EndGlobalSection
+EndGlobal
