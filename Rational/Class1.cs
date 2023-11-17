@@ -1,5 +1,9 @@
 ﻿namespace Rational2
 {
+    /// <summary>
+    /// Класс, позволяющий осуществлять арифмитические действия
+    /// с рациональными числами
+    /// </summary>
     public class Rational
     {
         /// <summary>
