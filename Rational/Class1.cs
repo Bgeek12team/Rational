@@ -71,7 +71,7 @@
          /// <returns>
          /// Возвращает результат сложения двух рациональных чисел
          /// </returns>
-        public Rational Add (Rational second)
+        private Rational Add (Rational second)
         {
             m = (m * second.n + second.m * n);
             n *= second.n;
@@ -86,7 +86,7 @@
         /// <returns>
         /// Возвращает результат перемножения двух рациональных чисел
         /// </returns>
-        public Rational Multiply (Rational second)
+        private Rational Multiply (Rational second)
         {
             m *= second.m;
             n *= second.n;
@@ -101,7 +101,7 @@
         /// <returns>
         /// Возвращает результат вычитания двух рациональных чисел
         /// </returns>
-        public Rational Sub(Rational second)
+        private Rational Sub(Rational second)
         {
             if (n != second.n)
             {
@@ -127,7 +127,7 @@
         /// <returns>
         /// Возвращает результат деления одного рационального числа на другое
         /// </returns>
-        public Rational Divide (Rational second)
+        private Rational Divide (Rational second)
         {
             int newM = this.m * second.n;
             int newN = this.n * second.m;
@@ -143,7 +143,7 @@
         /// <returns>
         /// Возвращает результат сложения рационального числа с целым
         /// </returns>
-        public Rational Add(int second)
+        private Rational Add(int second)
         {
             return this.Add(new Rational(second));
         }
@@ -155,7 +155,7 @@
         /// <returns>
         /// Возвращает результат умножения рационального числа и целого
         /// </returns>
-        public Rational Multiply(int second)
+        private Rational Multiply(int second)
         {
             return this.Multiply(new Rational(second));
 
@@ -168,7 +168,7 @@
         /// <returns>
         /// Возвращает результат вычитания из рационального числа целое
         /// </returns>
-        public Rational Sub(int second)
+        private Rational Sub(int second)
         {
             return this.Sub(new Rational(second));
         }
@@ -180,7 +180,7 @@
         /// <returns>
         /// Возвращает результат деления рационального числа на целое
         /// </returns>
-        public Rational Divide(int second)
+        private Rational Divide(int second)
         {
             return this.Divide(new Rational(second));
         }
@@ -336,18 +336,32 @@
 
             a = Math.Abs(m);
             b = Math.Abs(n);
-            while (a != b)
-                if (a > b)
-                    a = a - b;
-                else
-                    b = b - a;
-            nod = b;
+            nod = NOD(a, b);
             m /= nod;
             n /= nod;
+
             if (isNegative)
                 return (-Math.Abs(m), Math.Abs(n));
             else
                 return (Math.Abs(m), Math.Abs(n));
+        }
+        /// <summary>
+        /// Метод, находящий наибольший общий делитель двух чисел
+        /// с помощью алгоритма Евклида
+        /// </summary>
+        /// <param name="a">Первое число</param>
+        /// <param name="b">Второе число</param>
+        /// <returns>НОД двух чисел</returns>
+        private int NOD(int a, int b)
+        {
+            while (b != 0)
+            {
+                int temp = b;
+                b = a % b;
+                a = temp;
+            }
+
+            return a;
         }
         /// <summary>
         /// Позволяет преобразовать строку к рациональному числу
